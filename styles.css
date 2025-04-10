@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    flex-direction: column; /* Изменяем направление, чтобы текст был под сердцем */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#heart {
+    position: relative;
+    width: 200px; /* Увеличиваем ширину */
+    height: 200px; /* Увеличиваем высоту */
+    background-color: red;
+    transform: rotate(-45deg);
+    margin: 20px; /* Уменьшаем отступ, чтобы текст и сердце были ближе */
+}
+
+#heart:before,
+#heart:after {
+    content: '';
+    position: absolute;
+    width: 200px; /* Увеличиваем ширину */
+    height: 200px; /* Увеличиваем высоту */
+    background-color: red;
+    border-radius: 50%;
+}
+
+#heart:before {
+    top: -100px; /* Увеличиваем отступ, чтобы сердечко оставалось целым */
+    left: 0;
+}
+
+#heart:after {
+    left: 100px; /* Увеличиваем отступ, чтобы сердечко оставалось целым */
+    top: 0;
+}
+
+#message {
+    font-size: 24px; /* Размер текста */
+    color: #ff1493; /* Цвет текста (можете изменить по желанию) */
+    text-align: center; /* Центрируем текст */
+    margin-top: 20px; /* Отступ сверху для отделения от сердца */
+}
